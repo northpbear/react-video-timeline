@@ -1,0 +1,68 @@
+{
+  "name": "react-video-timeline",
+  "version": "1.0.0",
+  "description": "A React video timeline component with frame extraction and time range selection",
+  "type": "module",
+  "main": "./index.tsx",
+  "module": "./index.tsx",
+  "types": "./index.tsx",
+  "exports": {
+    ".": {
+      "types": "./index.tsx",
+      "import": "./index.tsx",
+      "require": "./index.tsx"
+    },
+    "./*": "./*"
+  },
+  "publishConfig": {
+    "main": "dist/index.js",
+    "module": "dist/index.esm.js",
+    "types": "dist/index.d.ts",
+    "exports": {
+      ".": {
+        "types": "./dist/index.d.ts",
+        "import": "./dist/index.esm.js",
+        "require": "./dist/index.js"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "echo \"Build script not configured yet\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "video",
+    "timeline",
+    "video-editor",
+    "frame-extraction",
+    "time-range",
+    "canvas"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "homepage": "",
+  "bugs": {
+    "url": ""
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "dependencies": {
+    "classnames": "^2.3.2"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "less": "^4.2.0",
+    "typescript": "^5.0.0"
+  }
+}

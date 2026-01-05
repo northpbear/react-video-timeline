@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "packageManager": "pnpm@9.4.0",
+  "scripts": {
+    "dev": "pnpm --filter react-video-timeline-demo dev",
+    "build": "pnpm --filter react-video-timeline build",
+    "build:demo": "pnpm --filter react-video-timeline-demo build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}

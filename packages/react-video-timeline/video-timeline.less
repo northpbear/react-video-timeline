@@ -1,0 +1,143 @@
+/**
+ * 视频时间轴组件样式
+ *
+ * 命名规范：使用 vt- 前缀 (video-timeline)
+ */
+
+.vt-timeline {
+  position: relative;
+  user-select: none;
+  background: transparent;
+  border-radius: var(--ys-border-radius-4);
+  overflow: visible;
+
+  &-canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--ys-border-radius-4);
+  }
+
+  // 禁用状态
+  &--disabled {
+    opacity: 0.6;
+    pointer-events: none;
+
+    .vt-timeline-canvas {
+      cursor: not-allowed;
+    }
+  }
+
+  // 拖拽状态
+  &--dragging {
+    .vt-timeline-canvas {
+      cursor: grabbing !important;
+    }
+  }
+
+  // 加载状态
+  &-loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 10;
+
+    &-bar {
+      width: 120px;
+      height: 4px;
+      background: var(--ys-white-10);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    &-progress {
+      height: 100%;
+      background: var(--ys-primary);
+      border-radius: 2px;
+      transition: width 0.2s ease;
+    }
+
+    &-text {
+      font-size: var(--ys-font-size-12);
+      color: var(--ys-secondary-text);
+    }
+  }
+
+  // 错误状态
+  &-error {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 10;
+
+    span {
+      font-size: var(--ys-font-size-14);
+      color: var(--ys-error);
+    }
+  }
+
+  // 重试按钮
+  &-retry-btn {
+    padding: 6px 16px;
+    font-size: var(--ys-font-size-12);
+    color: var(--ys-primary-text);
+    background: var(--ys-primary);
+    border: none;
+    border-radius: var(--ys-border-radius-4);
+    cursor: pointer;
+    transition: background 0.2s ease;
+
+    &:hover {
+      background: var(--ys-primary-hover);
+    }
+
+    &:active {
+      background: var(--ys-primary-active);
+    }
+  }
+
+  // 指针时间 tooltip
+  &-tooltip {
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%) translateY(-100%);
+    padding: 4px 8px;
+    font-size: var(--ys-font-size-12);
+    font-weight: var(--ys-font-weight-500);
+    line-height: var(--ys-line-height-16);
+    color: var(--ys-primary-text);
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: var(--ys-border-radius-4);
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 20;
+
+    // 小三角箭头
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-width: 4px 4px 0;
+      border-style: solid;
+      border-color: rgba(0, 0, 0, 0.85) transparent transparent transparent;
+    }
+  }
+}
