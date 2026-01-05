@@ -2,6 +2,8 @@
 
 > 使用原生 Canvas + Video API 实现的视频帧预览与时间选择组件
 
+![VideoTimeline 预览](./.github/assets/preview.png)
+
 ## ✨ 功能特性
 
 - 📹 **视频帧提取**：自动从视频中提取关键帧并展示
