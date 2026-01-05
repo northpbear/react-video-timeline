@@ -16,4 +16,4 @@ export type {
   VideoTimelineProps,
   VideoTimelineRef,
 } from './types';
-export { VideoTimeline } from './video-timeline';
+export { VideoTimeline } from './components';

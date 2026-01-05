@@ -8,11 +8,11 @@ import {
   useRef,
   useState,
 } from 'react';
-import { useDragInteraction } from './hooks/use-drag-interaction';
-import { useFrameExtractor } from './hooks/use-frame-extractor';
-import { TimeRange, VideoTimelineProps, VideoTimelineRef } from './types';
-import { formatTimePrecise } from './utils/time-format';
-import { TimelineRenderer } from './utils/timeline-renderer';
+import { useDragInteraction } from '../hooks/use-drag-interaction';
+import { useFrameExtractor } from '../hooks/use-frame-extractor';
+import { TimeRange, VideoTimelineProps, VideoTimelineRef } from '../types';
+import { formatTimePrecise } from '../utils/time-format';
+import { TimelineRenderer } from '../utils/timeline-renderer';
 import './video-timeline.less';
 
 /** 默认配置 */
@@ -365,3 +365,4 @@ export const VideoTimeline = forwardRef<VideoTimelineRef, VideoTimelineProps>(
 );
 
 VideoTimeline.displayName = 'VideoTimeline';
+
